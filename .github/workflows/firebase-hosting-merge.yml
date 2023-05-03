@@ -26,11 +26,7 @@ jobs:
         run: yarn prod
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
-      - name: Authenticate with Firebase
+      - name: Deploy App
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-        run: firebase login --no-localhost --token $FIREBASE_TOKEN
-      - name: Deploy to Firebase Hosting
-        env:
-          FIREBASE_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_PROJECTID }}
-        run: firebase deploy --only hosting
+        run: firebase deploy --token "$FIREBASE_TOKEN" --non-interactive
