@@ -30,6 +30,8 @@ export default function App({ Component, pageProps }) {
 
   const [globalUserState, setGlobalUserState] = useState(userInfo)
 
+  console.log('MY_SECRET_FROM_GITHUB', process.env.MY_SECRET_KEY)
+
   return (
     <AppContext.Provider value={{globalUserState, setGlobalUserState}}>
       <Component {...pageProps} />

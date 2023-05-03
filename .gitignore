@@ -16,8 +16,6 @@ setup-env-variables.sh
 .env
 
 out/
-package-lock.json
-yarn.lock
 
 
 # Uncomment this if you'd like others to create their own Firebase project.
