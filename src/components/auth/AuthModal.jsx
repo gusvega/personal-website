@@ -4,8 +4,23 @@ import SignUp from './signup';
 
 function AuthModal({ isOpen, onClose }) {
    const showHideClassName = isOpen ? "block" : "hidden";
-   const [selectedItem, setSelectedItem] = useState('signin')
-   
+
+   let [options, setOptions] = useState({
+      signup: {
+         container: <SignUp />,
+         name: 'Sign Up'
+      },
+      signin: {
+         name: 'Sign In',
+         container: <SignIn />
+      }
+   })
+
+   const [selectedItem, setSelectedItem] = useState(options.signup.name.split(' ').join('').toLowerCase())
+
+   const handleItemClick = (item) => {
+      setSelectedItem(item);
+   };
 
 
    return (
@@ -14,21 +29,30 @@ function AuthModal({ isOpen, onClose }) {
             <div className="fixed inset-0 bg-gray-900 opacity-75"></div>
 
             <div className="bg-white rounded-lg overflow-hidden shadow-lg transform transition-all sm:max-w-md w-full">
-               <div className="bg-gray-200 text-gray-700 py-3 px-4">
-                  <h2 className="text-xl font-bold">New Modal Title</h2>
+               <div className='flex bg-black justify-end'>
+                  <div className="bg-gray-200 flex justify-end">
+                     <button className="bg-black text-white py-2 px-4 hover:text-gray-400" onClick={onClose}>Close</button>
+                  </div>
                </div>
+               {selectedItem === 'signup' ? options['signup'].container : options['signin'].container}
+               <div className='flex justify-evenly'>
 
-               {/* <SignIn /> */}
-               <SignUp/>
-               <div className="text-gray-400 text-center p-1 flex justify-between">
-                  <div className='bg-gray-100 w-1/2 p-2'>Sign In</div>
-                  <div className='bg-gray-100 w-1/2 p-2'>Sign Up</div>
-                  {/* Don’t you have an account? <Link href="/signup" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign up</Link> */}
+                  {Object.entries(options).map(([key, value]) => {
+                     return (
+                        <button
+                           key={value.name}
+                           className={`p-3 justify-center w-full text-center font-light text-gray-600 hover:bg-slate-200  ${selectedItem === key ? "active" : ""
+                              } ${selectedItem === key
+                                 ? "bg-slate-200 active:bg-slate-300"
+                                 : "bg-slate-200"
+                              }}`}
+                           onClick={() => handleItemClick(key)}
+                        >{value.name}</button>
+                     )
+                  })}
                </div>
+               {/* Don’t you have an account? <Link href="/signup" className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out">Sign up</Link> */}
 
-               <div className="bg-gray-200 flex justify-end">
-                  <button className="bg-gray-700 text-white py-2 px-4 rounded" onClick={onClose}>Close</button>
-               </div>
             </div>
          </div>
       </div>

@@ -114,7 +114,7 @@ function NewModal({ isOpen, onClose }) {
 
    useEffect(() => {
       // Updating phase
-      console.log('Component updated');
+      // // console.log('Component updated');
       doCalcs()
 
    });
@@ -146,15 +146,15 @@ function NewModal({ isOpen, onClose }) {
       totalExpensesPerMonth = parseInt(operatingExpensesPerMonth) + parseInt(monthlyPrinciplePlusInterest)
       totalExpensesPerYear = parseInt(totalExpensesPerMonth) * 12,
 
-      // income calculations
-      grossIncomePerYear = parseInt(grossIncomePerMonth) * 12
+         // income calculations
+         grossIncomePerYear = parseInt(grossIncomePerMonth) * 12
       netOperatingIncome = parseInt(grossIncomePerYear) - parseInt(operatingExpensesPerYear)
       capRatePercentage = (parseInt(netOperatingIncome) / parseInt(values.offerPrice)) * 100
       cashFlowPerMonth = grossIncomePerMonth - totalExpensesPerMonth
       cashFlowPerYear = parseInt(cashFlowPerMonth) * 12
       cashOnCashReturn = Math.ceil((parseInt(cashFlowPerYear) / parseInt(totalInvestment)) * 100)
 
-      console.log(calculations)
+      // // console.log(calculations)
 
    }
 
@@ -273,7 +273,7 @@ function NewModal({ isOpen, onClose }) {
          totalExpensesPerYear: totalExpensesPerYear,
       })
 
-      console.log('CALCS: ', calculations)
+      // console.log('CALCS: ', calculations)
 
       let id = generateRandomId()
 
@@ -281,14 +281,14 @@ function NewModal({ isOpen, onClose }) {
          ...globalUserState,
          analyses: {
             ...globalUserState.analyses,
-            [id] : {
+            [id]: {
                ...values,
                ...calculations
             }
          }
       })
 
-      console.log('GLOBAL CONTEXT: ', globalUserState)
+      // console.log('GLOBAL CONTEXT: ', globalUserState)
 
       onClose()
    }
@@ -299,7 +299,7 @@ function NewModal({ isOpen, onClose }) {
             <div className="fixed inset-0 bg-gray-600 opacity-75"></div>
 
             <div className="bg-slate-200 rounded-lg overflow-hidden shadow-lg transform transition-all fixed w-full">
-            <div className="bg-gray-200 text-gray-700 py-3 px-4 flex justify-between items-center">
+               <div className="bg-gray-200 text-gray-700 py-3 px-4 flex justify-between items-center">
                   <h2 className="text-xl font-bold">Analysis Modal Title</h2>
                   <div className="bg-gray-200 py-2 px-4 flex justify-end">
                      <button className="bg-gray-700 text-white py-2 px-4 rounded" onClick={onClose}>Close</button>

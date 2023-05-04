@@ -16,6 +16,7 @@ setup-env-variables.sh
 .env
 
 out/
+.next/
 
 
 # Uncomment this if you'd like others to create their own Firebase project.

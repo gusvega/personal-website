@@ -53,7 +53,7 @@
 //          email: null,          // changing the state of *changed value*
 //       })
 
-//       console.log(data)
+//       // console.log(data)
 //       destroyCookie(null, 'user_cookie');
 //    }
 

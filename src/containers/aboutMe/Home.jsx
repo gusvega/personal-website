@@ -19,7 +19,7 @@ const AboutMe = () => {
                         onInit={(typewriter) => {
                            typewriter.typeString('Hola!')
                               .callFunction(() => {
-                                 console.log('String typed out!');
+                                 // console.log('String typed out!');
                               })
                               .pauseFor(2500)
                               .deleteAll()
@@ -72,7 +72,7 @@ const AboutMe = () => {
                         onInit={(typewriter) => {
                            typewriter.typeString('Hola!')
                               .callFunction(() => {
-                                 console.log('String typed out!');
+                                 // console.log('String typed out!');
                               })
                               .pauseFor(2500)
                               .deleteAll()

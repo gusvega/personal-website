@@ -44,7 +44,7 @@ const MainLayout = () => {
   let [selectedItem, setSelectedItem] = useState(Object.keys(mainMenuItems)[0]);
 
   let [selectedSubItem, setSelectedSubItem] = useState("");
-  // console.log(selectedSubItem);
+  // // console.log(selectedSubItem);
 
   const [showDiv, setShowDiv] = useState(false);
 
@@ -73,9 +73,8 @@ const MainLayout = () => {
     <>
       <container className="hidden sm:flex">
         <div
-          className={`h-screen flex flex-col items-left justify-left ${
-            !menuCollapsed ? "w-60" : "w-30"
-          } `}
+          className={`h-screen flex flex-col items-left justify-left ${!menuCollapsed ? "w-60" : "w-30"
+            } `}
         >
           <div
             className=" p-5 flex justify-center items-center"
@@ -86,11 +85,10 @@ const MainLayout = () => {
               onClick={toggleDiv}
             >
               <p
-                className={`text-black font-extrabold text-2xl ${
-                  !menuCollapsed
+                className={`text-black font-extrabold text-2xl ${!menuCollapsed
                     ? "transform rotate-90 duration-300 ease-in-out"
                     : "transform duration-300 ease-in-out"
-                }`}
+                  }`}
                 onClick={collapseMenu}
               >
                 |
@@ -104,19 +102,16 @@ const MainLayout = () => {
                   <>
                     <div
                       key={value.name}
-                      className={`p-3 justify-center hover:bg-slate-200  ${
-                        selectedItem === key ? "active" : ""
-                      } ${
-                        selectedItem === key
+                      className={`p-3 justify-center hover:bg-slate-200  ${selectedItem === key ? "active" : ""
+                        } ${selectedItem === key
                           ? "bg-slate-100 active:bg-slate-100"
                           : "bg-slate-200"
-                      }}`}
+                        }}`}
                       onClick={() => handleItemClick(key)}
                     >
                       <div
-                        className={`${
-                          selectedItem === key ? "font-bold " : ""
-                        } `}
+                        className={`${selectedItem === key ? "font-bold " : ""
+                          } `}
                       >
                         {!menuCollapsed ? (
                           <div className="flex flex-row justify-center items-center">
@@ -156,9 +151,8 @@ const MainLayout = () => {
           ) : (
             <div className="flex m-4">
               <div
-                className={`bg-white  border-2 border-black fa-solid fa-user rounded-full w-8 h-8 text-center justify-center items-center flex transform ease-in-out transition-all duration-300  ${
-                  menuCollapsed ? "ease-in-out" : "ease-in-out"
-                }`}
+                className={`bg-white  border-2 border-black fa-solid fa-user rounded-full w-8 h-8 text-center justify-center items-center flex transform ease-in-out transition-all duration-300  ${menuCollapsed ? "ease-in-out" : "ease-in-out"
+                  }`}
               ></div>
             </div>
           )}
@@ -214,13 +208,11 @@ const MainLayout = () => {
                   <>
                     <div
                       key={value.name}
-                      className={`p-3 rounded-md min-h w-full text-center hover:bg-slate-200 ${
-                        selectedItem === key ? "active" : ""
-                      } ${
-                        selectedItem === key
+                      className={`p-3 rounded-md min-h w-full text-center hover:bg-slate-200 ${selectedItem === key ? "active" : ""
+                        } ${selectedItem === key
                           ? "bg-slate-100 active:bg-slate-100"
                           : "bg-slate-200"
-                      }}`}
+                        }}`}
                       onClick={() => handleItemClick(key)}
                     >
                       <div

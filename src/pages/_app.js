@@ -7,9 +7,9 @@ export default function App({ Component, pageProps }) {
   // useEffect(() => {
   //     const cookieValue = Cookies.get('user_cookie');
   //     if(cookieValue){
-  //        console.log(cookieValue)
+  //        // console.log(cookieValue)
   //        const decodedToken = jwt(cookieValue)
-  //        console.log(decodedToken)
+  //        // console.log(decodedToken)
 
   //        if (cookieValue) {
   //           setData(decodedToken)
@@ -30,10 +30,10 @@ export default function App({ Component, pageProps }) {
 
   const [globalUserState, setGlobalUserState] = useState(userInfo)
 
-  console.log('MY_SECRET_FROM_GITHUB', process.env.MY_SECRET_KEY)
+  // console.log('MY_SECRET_FROM_GITHUB', process.env.MY_SECRET_KEY)
 
   return (
-    <AppContext.Provider value={{globalUserState, setGlobalUserState}}>
+    <AppContext.Provider value={{ globalUserState, setGlobalUserState }}>
       <Component {...pageProps} />
     </AppContext.Provider>
   );
