@@ -13,29 +13,23 @@ const auth = getAuth(app);
 const db = getFirestore(app)
 const storage = getStorage(app)
 
-const getFile = () => {
-   const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-   const fileUrl = getDownloadURL(ref(storage, 'DevOps Engineer Resume.pdf'));
+const getFile = async () => {
+   try {
+     const fileRef = ref(storage, 'DevOps Engineer Resume.pdf');
+     const fileUrl = await getDownloadURL(fileRef);
  
-   fetch(proxyUrl + fileUrl)
-     .then((response) => {
-       // `response` is the response from the proxy server
-       return response.blob();
-     })
-     .then((blob) => {
-       // `blob` is the file content as a Blob object
-       const url = URL.createObjectURL(blob);
+     const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+     const response = await fetch(proxyUrl + fileUrl);
+     const blob = await response.blob();
  
-       // Or inserted into an <img> element
-       const img = document.getElementById('myimg');
-       img.setAttribute('src', url);
-     })
-     .catch((error) => {
-       // Handle any errors
-     });
+     const url = URL.createObjectURL(blob);
+     const img = document.getElementById('myimg');
+     img.setAttribute('src', url);
+   } catch (error) {
+     // Handle any errors
+   }
  }
 
-// console.log(app, db, auth)
 
 export { db, auth, getFile };
 

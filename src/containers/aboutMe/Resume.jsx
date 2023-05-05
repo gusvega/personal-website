@@ -140,15 +140,6 @@ function Resume() {
                   </Card>
                </button>
 
-               <button className="w-100 hover:bg-slate-100 p-3">
-                  <Card style={{ border: '0' }}>
-                     <Card.Body style={{ fontFamily: 'Amiko' }}>
-                        <Card.Title className='items-start flex text-red-500' onClick={() => handleClick()} style={{ fontFamily: 'Montserrat', fontWeight: '800' }}>/ DOWNLOAD RESUME</Card.Title>
-                     </Card.Body>
-                  </Card>
-                  {/* <a href={`${process.env.PUBLIC_URL}/gusvega-resume.pdf`} style={{ display: 'center' }} download class="button">Download Resume</a> */}
-               </button>
-
             </Col>
          </div>
 
@@ -233,15 +224,6 @@ function Resume() {
 
                      </Card.Body>
                   </Card>
-               </button>
-
-               <button className="w-full hover:bg-slate-100 p-3">
-                  <Card style={{ border: '0' }}>
-                     <Card.Body style={{ fontFamily: 'Amiko' }}>
-                        <Card.Title className='items-start flex text-red-500' onClick={() => handleClick()} style={{ fontFamily: 'Montserrat', fontWeight: '800' }}>/ DOWNLOAD RESUME</Card.Title>
-                     </Card.Body>
-                  </Card>
-                  {/* <a href={`${process.env.PUBLIC_URL}/gusvega-resume.pdf`} style={{ display: 'center' }} download class="button">Download Resume</a> */}
                </button>
 
             </Col>
