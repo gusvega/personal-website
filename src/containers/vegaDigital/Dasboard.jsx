@@ -139,25 +139,25 @@ const Dashboard = () => {
                                  <td class="py-3 px-6 text-center whitespace-nowrap">{value.totalExpensesPerYear}</td>
                                  <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.totalExpensesPerMonth}</td>
                                  <td class="text-center">
-                                    <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => {}}>
+                                    <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => { }}>
                                        <i class="fas fa-edit"></i>
                                     </a>
-                                 <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
-                                    <i class="fas fa-trash"></i>
-                                 </a>
-                                 {/* <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2">
+                                    <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
+                                       <i class="fas fa-trash"></i>
+                                    </a>
+                                    {/* <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2">
                                        <i class="fas fa-download"></i>
                                     </a> */}
-                              </td>
+                                 </td>
                               </tr>
-                     )
+                           )
                         })}
-                     <AnalysisModal isOpen={isAnalysisOpen} onClose={toggleAnalysisModal} data={globalUserState.analyses[selectedItem]}></AnalysisModal>
-                  </tbody>
-               </table>
+                        <AnalysisModal isOpen={isAnalysisOpen} onClose={toggleAnalysisModal} data={globalUserState.analyses[selectedItem]}></AnalysisModal>
+                     </tbody>
+                  </table>
+               </div>
             </div>
          </div>
-      </div>
       </div >
    )
 }

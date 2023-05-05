@@ -23,7 +23,7 @@ const AboutMe = () => {
                               })
                               .pauseFor(2500)
                               .deleteAll()
-                              .typeString('I am a Full Stack Software Engineer with a focus on front end development.')
+                              .typeString('I am a DevOps Engineer... I also do Full Stack development.')
                               .start();
                         }}
                      />
@@ -58,7 +58,9 @@ const AboutMe = () => {
             </div>
          </div>
 
-         <div className='flex sm:hidden'>
+
+         {/* MOBILE */}
+         <div className='flex sm:hidden bg-white'>
             <div className=' w-full flex flex-col'>
                <div className='w-full flex flex-col'>
                   <div className='p-4 m-4 flex items-left'>
@@ -76,7 +78,7 @@ const AboutMe = () => {
                               })
                               .pauseFor(2500)
                               .deleteAll()
-                              .typeString('I am a Full Stack Software Engineer with a focus on front end development.')
+                              .typeString('I am a DevOps Engineer... I also do Full Stack development.')
                               .start();
                         }}
                      />

@@ -1,26 +1,72 @@
 import { Row, Col, Card, Container, Button } from 'react-bootstrap';
 
 
+
+
 const Skills = () => {
+
+   let skills = {
+      Architecture: ['Serverless', 'Microservices'],
+      Containerization: ['Docker', 'Kubernetes'],
+      Cloud: ['Azure'],
+      InfrastructureAsCode: ['Terraform'],
+      ConfigurationManagement: ['Ansible'],
+      AutomationPipelines: ['Azure DevOps', 'Github Actions'],
+      ProgrammingLanguages: ['Javascript'],
+      Scripting: ['Python', 'Bash'],
+      FrontEnd: ['ReactJS'],
+      StylingLibrary: ['Tailwind'],
+      BackEnd: ['NodeJS'],
+      OperatingSystems: ['MacOS', 'Linux', 'Windows']
+   }
+
    return (
-      <Card.Text style={{ fontFamily: 'Amiko' }} className='flex w-full mt-3'>
+      <>
+      <Card.Text style={{ fontFamily: 'Amiko' }} className='w-full mt-3 hidden sm:flex'>
          <ul className='flex w-full'>
             <div className='w-1/3 items-start flex flex-col'>
-               <li>Architecture: Serverless</li>
-               <li>Containerization: Docker</li>
-               <li>Cloud: Azure</li>
-               <li>Automation: Azure DevOps</li>
-               <li>Languages: Javascript - Typescript</li>
-            </div>
-            <div className='w-1/2 items-start flex flex-col'>
-               <li>Front End: ReactJS</li>
-               <li>Styling Library: Bootstrap</li>
-               <li>Back End: NodeJS</li>
-               <li>API Development: ExpressJS</li>
-               <li>OS: MacOS - Linux</li>
+
+               {Object.entries(skills).map(([key, value]) => {
+                  return (
+                     <div className='mb-2'>
+
+                     <span className='font-extrabold'>{key}</span>
+                     <li>{value.map(el => {
+                        return (
+                           <div className='flex'>
+                           <p>-- {el}</p>
+                           </div>
+                        )
+                     })}</li>
+                     </div>
+                  )})}
             </div>
          </ul>
       </Card.Text>
+
+      {/* MOBILE */}
+      <Card.Text style={{ fontFamily: 'Amiko' }} className='flex w-full mt-3 sm:hidden'>
+         <ul className='flex w-full'>
+            <div className='w-full items-start flex flex-col'>
+
+               {Object.entries(skills).map(([key, value]) => {
+                  return (
+                     <div className='mb-2'>
+
+                     <span className='font-extrabold'>{key}</span>
+                     <li>{value.map(el => {
+                        return (
+                           <div className='flex'>
+                           <p>-- {el}</p>
+                           </div>
+                        )
+                     })}</li>
+                     </div>
+                  )})}
+            </div>
+         </ul>
+      </Card.Text>
+      </>
    )
 }
 

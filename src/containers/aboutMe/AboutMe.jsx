@@ -30,7 +30,8 @@ const Home = () => {
 
 
    return (
-      <div className=' h-screen w-full flex flex-col bg-slate-100'>
+      <div className=' h-screen w-full flex flex-col bg-white'>
+
          <div className="flex flex-row justify-between mt-10 pl-4">
             <div className="flex items-center">
                {Object.entries(menuItems).map(([key, value]) => {
@@ -39,7 +40,7 @@ const Home = () => {
                         key={value.name}
                         className={`p-3 justify-center font-light text-gray-600 hover:bg-slate-200  ${selectedItem === key ? "active" : ""
                            } ${selectedItem === key
-                              ? "bg-white active:bg-slate-100"
+                              ? "bg-slate-100 active:bg-white"
                               : "bg-slate-200"
                            }}`}
                         onClick={() => handleItemClick(key)}
@@ -48,6 +49,7 @@ const Home = () => {
                })}
             </div>
          </div>
+         
          {selectedItem === "resume" ? menuItems.resume.container : ""}
          {selectedItem === "home" ? menuItems.home.container : ""}
       </div>

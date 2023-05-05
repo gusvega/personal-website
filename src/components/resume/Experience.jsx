@@ -30,7 +30,7 @@ const jobs = {
       </Card.Text>
    </>,
    ots: <>
-      <Card.Subtitle style={{ fontWeight: '900' }}>{'>>'} Jr DevOps Engineer</Card.Subtitle>
+      <Card.Subtitle style={{ fontWeight: '900' }}>{'>>'} DevOps Engineer</Card.Subtitle>
       <Card.Text>Open Technology Solutions | Denver, CO | March, 2017 - Sept, 2017</Card.Text>
       <Card.Text>
          <ul>
@@ -39,15 +39,6 @@ const jobs = {
          </ul>
       </Card.Text>
    </>,
-   free: <>
-      <Card.Subtitle style={{ fontWeight: '900' }}>{'>>'} Fullstack Developer</Card.Subtitle>
-      <Card.Text>Independent/Freelancer | Denver, CO | Jan, 2015 – Apr, 2021</Card.Text>
-      <Card.Text>
-         <ul>
-            <li>Worked on numerous web applications projects for customers and personal purposes using technologies such as ReactJS nodeJS while always focusing on cloud-based implementation.</li>
-            <li>Manage the entire development process for projects from the UI/UX design to the development and testing to the deployment of the applications.</li>
-         </ul>
-      </Card.Text></>
 
 }
 

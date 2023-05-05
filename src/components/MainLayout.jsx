@@ -13,23 +13,6 @@ const MainLayout = () => {
       container: <Home />,
       menuIcon: "fa-solid fa-house",
     },
-    //  personal: {
-    //    name: "Personal",
-    //    subMenu: {
-    //      musicProduction: ["Music", "fa-solid fa-music"],
-    //      travels: ["Travels", "fa-solid fa-plane"],
-    //    },
-    //    container: <Personal />,
-    //    menuIcon: "fa-solid fa-user",
-    //  },
-    //  career: {
-    //    name: "Career",
-    //    subMenu: {
-    //      resume: ["Resume", "fa-solid fa-file"],
-    //    },
-    //    container: <Career />,
-    //    menuIcon: "fa-solid fa-code",
-    //  },
     business: {
       name: "Vega Digital",
       subMenu: {
@@ -65,16 +48,13 @@ const MainLayout = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <>
       <container className="hidden sm:flex">
         <div
-          className={`h-screen flex flex-col items-left justify-left ${!menuCollapsed ? "w-60" : "w-30"
-            } `}
+          className={`h-screen flex flex-col items-left justify-left ${
+            !menuCollapsed ? "w-60" : "w-30"
+          } `}
         >
           <div
             className=" p-5 flex justify-center items-center"
@@ -85,10 +65,11 @@ const MainLayout = () => {
               onClick={toggleDiv}
             >
               <p
-                className={`text-black font-extrabold text-2xl ${!menuCollapsed
+                className={`text-black font-extrabold text-2xl ${
+                  !menuCollapsed
                     ? "transform rotate-90 duration-300 ease-in-out"
                     : "transform duration-300 ease-in-out"
-                  }`}
+                }`}
                 onClick={collapseMenu}
               >
                 |
@@ -97,65 +78,43 @@ const MainLayout = () => {
           </div>
           <div className=" w-full h-screen items-center text-left flex">
             <div className="w-full ">
-              {Object.entries(mainMenuItems).map(([key, value]) => {
-                return (
-                  <>
-                    <div
-                      key={value.name}
-                      className={`p-3 justify-center hover:bg-slate-200  ${selectedItem === key ? "active" : ""
-                        } ${selectedItem === key
-                          ? "bg-slate-100 active:bg-slate-100"
-                          : "bg-slate-200"
-                        }}`}
-                      onClick={() => handleItemClick(key)}
-                    >
+              {Object.entries(mainMenuItems)
+                .filter(([key, value]) => key === "home")
+                .map(([key, value]) => {
+                  return (
+                    <>
                       <div
-                        className={`${selectedItem === key ? "font-bold " : ""
-                          } `}
+                        key={value.name}
+                        className={`p-3 justify-center hover:bg-slate-200  ${
+                          selectedItem === key ? "active" : ""
+                        } ${
+                          selectedItem === key
+                            ? "bg-slate-100 active:bg-slate-100"
+                            : "bg-slate-200"
+                        }}`}
+                        onClick={() => handleItemClick(key)}
                       >
-                        {!menuCollapsed ? (
-                          <div className="flex flex-row justify-center items-center">
-                            <div>{value.name}</div>
-                          </div>
-                        ) : (
-                          <div className="flex m-1 justify-center">
-                            <div className={`${value.menuIcon} `} />
-                          </div>
-                        )}
+                        <div
+                          className={`${
+                            selectedItem === key ? "font-bold " : ""
+                          } `}
+                        >
+                          {!menuCollapsed ? (
+                            <div className="flex flex-row justify-center items-center">
+                              <div>{value.name}</div>
+                            </div>
+                          ) : (
+                            <div className="flex m-1 justify-center">
+                              <div className={`${value.menuIcon} `} />
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  </>
-                );
-              })}
+                    </>
+                  );
+                })}
             </div>
           </div>
-
-          {!menuCollapsed ? (
-            /* <div className="flex items-center justify-start m-4">
-              <div className="bg-black rounded-full w-8 h-8"></div>
-              <div className="ml-3 mr-3 font-light text-gray-500">
-                <div>User Name</div>
-              </div>
-            </div> */
-
-            <div className="flex items-center justify-start m-4">
-              <button
-                className="bg-white border-2 border-black font-light rounded-full w-full h-8"
-                onClick={toggleModal}
-              >
-                {" "}
-                Sign In{" "}
-              </button>
-              <AuthModal isOpen={isOpen} onClose={toggleModal} />
-            </div>
-          ) : (
-            <div className="flex m-4">
-              <div
-                className={`bg-white  border-2 border-black fa-solid fa-user rounded-full w-8 h-8 text-center justify-center items-center flex transform ease-in-out transition-all duration-300  ${menuCollapsed ? "ease-in-out" : "ease-in-out"
-                  }`}
-              ></div>
-            </div>
-          )}
         </div>
         <div className={` ${!menuCollapsed ? "w-11/12" : "w-full"}`}>
           <div>
@@ -203,38 +162,44 @@ const MainLayout = () => {
             </div>
 
             <div className=" w-full h-screen items-center text-left flex flex-col justify-center">
-              {Object.entries(mainMenuItems).map(([key, value]) => {
-                return (
-                  <>
-                    <div
-                      key={value.name}
-                      className={`p-3 rounded-md min-h w-full text-center hover:bg-slate-200 ${selectedItem === key ? "active" : ""
-                        } ${selectedItem === key
-                          ? "bg-slate-100 active:bg-slate-100"
-                          : "bg-slate-200"
-                        }}`}
-                      onClick={() => handleItemClick(key)}
-                    >
+              {Object.entries(mainMenuItems)
+                .filter(([key, value]) => key === "home")
+                .map(([key, value]) => {
+                  return (
+                    <>
                       <div
-                        className={`${selectedItem === key ? "font-bold" : ""}`}
+                        key={value.name}
+                        className={`p-3 rounded-md min-h w-full text-center hover:bg-slate-200 ${
+                          selectedItem === key ? "active" : ""
+                        } ${
+                          selectedItem === key
+                            ? "bg-slate-100 active:bg-slate-100"
+                            : "bg-slate-200"
+                        }}`}
+                        onClick={() => handleItemClick(key)}
                       >
-                        {value.name}
+                        <div
+                          className={`${
+                            selectedItem === key ? "font-bold" : ""
+                          }`}
+                        >
+                          {value.name}
+                        </div>
                       </div>
-                    </div>
-                  </>
-                );
-              })}
+                    </>
+                  );
+                })}
             </div>
           </div>
         )}
 
-        <div>{selectedItem === "home" ? mainMenuItems.home.container : ""}</div>
-        <div>
+        <div className="w-full">{selectedItem === "home" ? mainMenuItems.home.container : ""}</div>
+        {/* <div>
           {selectedSubItem === "vegaDigital"
             ? mainMenuItems.business.container
             : ""}
-        </div>
-        <div>
+        </div> */}
+        {/* <div>
           {selectedItem === "business" ? mainMenuItems.business.container : ""}
         </div>
         <div>
@@ -242,7 +207,7 @@ const MainLayout = () => {
         </div>
         <div>
           {selectedItem === "personal" ? mainMenuItems.personal.container : ""}
-        </div>
+        </div> */}
       </container>
     </>
   );
