@@ -14,27 +14,26 @@ const db = getFirestore(app)
 const storage = getStorage(app)
 
 const getFile = () => {
-   getDownloadURL(ref(storage, 'DevOps Engineer Resume.pdf'))
-  .then((url) => {
-    // `url` is the download URL for 'images/stars.jpg'
-
-    // This can be downloaded directly:
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = 'blob';
-    xhr.onload = (event) => {
-      const blob = xhr.response;
-    };
-    xhr.open('GET', url);
-    xhr.send();
-
-    // Or inserted into an <img> element
-    const img = document.getElementById('myimg');
-    img.setAttribute('src', url);
-  })
-  .catch((error) => {
-    // Handle any errors
-  });
-}
+   const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+   const fileUrl = getDownloadURL(ref(storage, 'DevOps Engineer Resume.pdf'));
+ 
+   fetch(proxyUrl + fileUrl)
+     .then((response) => {
+       // `response` is the response from the proxy server
+       return response.blob();
+     })
+     .then((blob) => {
+       // `blob` is the file content as a Blob object
+       const url = URL.createObjectURL(blob);
+ 
+       // Or inserted into an <img> element
+       const img = document.getElementById('myimg');
+       img.setAttribute('src', url);
+     })
+     .catch((error) => {
+       // Handle any errors
+     });
+ }
 
 // console.log(app, db, auth)
 
