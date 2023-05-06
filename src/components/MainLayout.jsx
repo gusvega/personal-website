@@ -125,19 +125,16 @@ const MainLayout = () => {
           <div>
             {selectedItem === "career" ? mainMenuItems.career.container : ""}
           </div>
-          <div>
+          {/* <div>
             {selectedItem === "business"
               ? mainMenuItems.business.container
               : ""}
           </div>
           <div>
-            {selectedItem === "career" ? mainMenuItems.career.container : ""}
-          </div>
-          <div>
             {selectedItem === "personal"
               ? mainMenuItems.personal.container
               : ""}
-          </div>
+          </div> */}
         </div>
       </container>
 

@@ -60,7 +60,7 @@ const AboutMe = () => {
 
 
          {/* MOBILE */}
-         <div className='flex sm:hidden bg-white'>
+         <div className='flex sm:hidden  bg-white'>
             <div className=' w-full flex flex-col'>
                <div className='w-full flex flex-col'>
                   <div className='p-4 m-4 flex items-left'>
