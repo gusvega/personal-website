@@ -98,7 +98,7 @@ const Dashboard = () => {
    return (
       <>
       <div className="bg-white h-full hidden sm:flex flex-col">
-         <div className="p-5 mt-6 font-light text-lg text-gray-600">Vega Real Estate Analysis Tool</div>
+         <div className=" mt-6 font-light text-lg text-gray-600">Vega Real Estate Analysis Tool</div>
          <div className=" h-auto items-start justify-start w-auto flex m-5">
             <div className=" shadow-md p-3 bg-slate-100">
                <div className="font-light text-gray-500">Short Term Property Analysis</div>
@@ -163,10 +163,10 @@ const Dashboard = () => {
 
       {/* MOBILE */}
       <div className="bg-white h-full flex flex-col sm:hidden">
-         <div className="p-5 mt-6 font-light text-lg text-gray-600">Vega Real Estate Analysis Tool</div>
+         <div className="p-2 mt-6 font-light text-sm text-gray-600">Vega Real Estate Analysis Tool</div>
          <div className=" h-auto items-start justify-start w-auto flex">
             <div className=" shadow-md bg-slate-100">
-               <div className="font-light text-gray-500">Short Term Property Analysis</div>
+               <div className="font-light text-sm text-gray-500">Short Term Property Analysis</div>
                <div className="flex justify-start items-center my-3">
                   <div className="flex justify-between items-center">
                      <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded" onClick={toggleModal}>
@@ -175,14 +175,13 @@ const Dashboard = () => {
                      <NewModal isOpen={isOpen} onClose={toggleModal} />
                   </div>
                </div>
-               <div class="bg-white shadow-md rounded-md">
+               <div class="bg-white shadow-md rounded-md ">
                   <table class="w-full table-auto">
                      <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-xs">
                            <th class="bg-slate-300 px-2 text-left">Address</th>
                            <th class="px-2 text-left">Total Investment</th>
-                           <th class="bg-slate-300 px-2 text-center">Cash on Cash</th>
-                           <th class="px-2 text-center">Cash Flow / Year</th>
+                           <th class="bg-slate-300 px-2 text-center">ROI</th>
                            <th class="px-2 text-center">Actions</th>
                         </tr>
                      </thead>
@@ -191,9 +190,8 @@ const Dashboard = () => {
                            return (
                               <tr class="border-b border-gray-200 hover:bg-gray-100">
                                  <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap cursor-pointer hover:text-indigo-600" onClick={() => toggleAnalysisModal(key)}>{value.address}</td>
-                                 <td class="py-3 px-6 text-center whitespace-nowrap">{value.totalInvestment}</td>
-                                 <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashOnCashReturn}</td>
-                                 <td class="py-3 px-6 text-center whitespace-nowrap">{value.cashFlowPerYear}</td>
+                                 <td class="py-3 px-6 text-center whitespace-nowrap">${value.totalInvestment}</td>
+                                 <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashOnCashReturn}%</td>
                                  <td class="text-center">
                                     <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => { }}>
                                        <i class="fas fa-edit"></i>
@@ -201,9 +199,6 @@ const Dashboard = () => {
                                     <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
                                        <i class="fas fa-trash"></i>
                                     </a>
-                                    {/* <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2">
-                                       <i class="fas fa-download"></i>
-                                    </a> */}
                                  </td>
                               </tr>
                            )
