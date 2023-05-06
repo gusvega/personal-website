@@ -65,34 +65,8 @@ function Resume() {
  
 
 
-         {/* MOBILE */}
 
-         <div className=' flex-col bg-white h-full w-auto hidden sm:flex m-2'>
-            {/* <Col order={1} className='w-full flex flex-col'>
-
-               <div className="w-full h-full flex justify-center">
-                  <Card style={{ border: '0' }}>
-                     <Card.Body>
-                        <Card.Title ><div style={{ fontSize: '8rem' }}>{'<'}</div></Card.Title>
-                        <div style={{ paddingLeft: '10%' }}>
-                           <Card.Title style={{ fontSize: '4rem', fontFamily: 'Bebas Neue', marginBottom: '0' }}>Gus</Card.Title>
-                           <Card.Title style={{ fontSize: '4rem', fontFamily: 'Bebas Neue' }}>Vega</Card.Title>
-                           <Card.Text style={{ fontSize: '2rem', fontFamily: 'Amiko', fontWeight: '900' }}>
-                              DEVOPS
-                              <br></br>
-                              ENGINEER
-
-                           </Card.Text>
-                        </div>
-                        <Card.Title ><div style={{ fontSize: '8rem' }}>{'/>'}</div></Card.Title>
-                     </Card.Body>
-                  </Card>
-               </div>
-
-            </Col>
-            <br></br>
-            <br></br>
-            <br></br> */}
+         <div className=' flex-col bg-white h-full w-auto mt-4'>
 
             <Col md={8} order={0} className="order-md-1 w-full flex flex-col justify-center items-center m-auto">
 

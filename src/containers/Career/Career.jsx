@@ -35,8 +35,7 @@ const Home = () => {
 
 
    return (
-      <div className=' h-screen w-full flex flex-col bg-white'>
-
+      <div className=' h-screen w-full flex flex-col bg-white '>
          <div className="flex flex-row justify-between mt-10 pl-4">
             <div className="flex items-center">
                {Object.entries(menuItems).map(([key, value]) => {
