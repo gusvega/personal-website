@@ -63,7 +63,7 @@ function Resume() {
             @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
          </style>
          <div className=' flex-row ml-4 bg-white h-full hidden sm:flex'>
-            <Col md={4} order={1} className='w-1/3 m-auto flex flex-col'>
+            {/* <Col md={4} order={1} className='w-1/3 m-auto flex flex-col'>
 
                <div className="w-100 h-full flex justify-center">
                   <Card style={{ border: '0' }}>
@@ -85,7 +85,7 @@ function Resume() {
                   </Card>
                </div>
 
-            </Col>
+            </Col> */}
 
             <Col md={8} order={0} className="order-md-1 w-2/3 flex flex-col justify-center">
 
@@ -147,7 +147,7 @@ function Resume() {
          {/* MOBILE */}
 
          <div className='flex flex-col bg-white h-full w-auto sm:hidden m-2'>
-            <Col order={1} className='w-full flex flex-col'>
+            {/* <Col order={1} className='w-full flex flex-col'>
 
                <div className="w-full h-full flex justify-center">
                   <Card style={{ border: '0' }}>
@@ -171,11 +171,11 @@ function Resume() {
             </Col>
             <br></br>
             <br></br>
-            <br></br>
+            <br></br> */}
 
-            <Col md={8} order={0} className="order-md-1 w-full flex flex-col justify-center">
+            <Col md={8} order={0} className="order-md-1 w-full flex flex-col justify-center items-center m-auto">
 
-               <button className=" mb-4 hover:bg-slate-100 p-3 items-start flex">
+               <button className=" w-full mb-4 hover:bg-slate-100 p-3 items-start flex">
                   <Card style={{ border: '0' }}>
                      <Card.Body>
                         <Card.Title className='items-start flex' style={{ fontFamily: 'Montserrat', fontWeight: '800' }} onClick={() => { toggleBackground() }}>/ ABOUT ME</Card.Title>
@@ -188,7 +188,7 @@ function Resume() {
 
 
 
-               <button className="w-100 mb-4 hover:bg-slate-100 p-3 items-start">
+               <button className="w-full mb-4 hover:bg-slate-100 p-3 items-start">
                   <Card style={{ border: '0' }}>
                      <Card.Body>
                         <Card.Title className='items-start flex' onClick={() => { toggleSkills() }} style={{ fontFamily: 'Montserrat', fontWeight: '800' }} >/ SKILLS</Card.Title>
@@ -199,7 +199,7 @@ function Resume() {
                   </Card>
                </button>
 
-               <button className="w-100 mb-4 hover:bg-slate-100 p-3">
+               <button className="w-full mb-4 hover:bg-slate-100 p-3">
                   <Card style={{ border: '0' }}>
                      <Card.Body style={{ fontFamily: 'Amiko' }}>
                         <Card.Title className='items-start flex' onClick={() => { toggleExperience() }} style={{ fontFamily: 'Montserrat', fontWeight: '800' }}>/ EXPERIENCE</Card.Title>
@@ -212,7 +212,7 @@ function Resume() {
                   </Card>
                </button>
 
-               <button className="w-100 hover:bg-slate-100 p-3 mb-4" >
+               <button className="w-full hover:bg-slate-100 p-3 mb-4" >
 
                   <Card style={{ border: '0' }}>
                      <Card.Body style={{ fontFamily: 'Amiko' }}>
