@@ -164,8 +164,8 @@ const Dashboard = () => {
       {/* MOBILE */}
       <div className="bg-white h-full flex flex-col sm:hidden">
          <div className="p-5 mt-6 font-light text-lg text-gray-600">Vega Real Estate Analysis Tool</div>
-         <div className=" h-auto items-start justify-start w-auto flex m-5">
-            <div className=" shadow-md p-3 bg-slate-100">
+         <div className=" h-auto items-start justify-start w-auto flex">
+            <div className=" shadow-md bg-slate-100">
                <div className="font-light text-gray-500">Short Term Property Analysis</div>
                <div className="flex justify-start items-center my-3">
                   <div className="flex justify-between items-center">
