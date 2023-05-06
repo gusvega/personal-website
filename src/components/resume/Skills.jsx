@@ -45,7 +45,7 @@ const Skills = () => {
       </Card.Text>
 
       {/* MOBILE */}
-      <Card.Text style={{ fontFamily: 'Amiko' }} className='flex w-full mt-3 sm:hidden'>
+      <Card.Text style={{ fontFamily: 'Amiko' }} className='flex w-full mt-3 sm:hidden text-xs'>
          <ul className='flex w-full'>
             <div className='w-full items-start flex flex-col'>
 

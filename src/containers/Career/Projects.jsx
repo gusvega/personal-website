@@ -43,10 +43,10 @@ const Projects = () => {
                   return (
                      <div
                         key={value.name}
-                        className={`p-2 justify-center font-light text-gray-600 hover:bg-slate-200  ${selectedItem.toLowerCase() === key ? "active" : ""
+                        className={`p-2 justify-center font-light text-xs text-gray-600 hover:bg-slate-200  ${selectedItem.toLowerCase() === key ? "active" : ""
                            } ${selectedItem.toLowerCase() === key
-                              ? "bg-slate-300 active:bg-white"
-                              : "bg-slate-200"
+                              ? "bg-slate-200 active:bg-white"
+                              : "bg-slate-100"
                            }}`}
                         onClick={() => handleItemClick(key)}
                      >{value.name}</div>

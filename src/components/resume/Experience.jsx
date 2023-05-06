@@ -45,10 +45,16 @@ const jobs = {
 
 const Experience = () => {
    return (
-      <div className='flex flex-col items-start justify-start text-left'>
-         {Object.values(jobs).map(el => <div className='my-3'>{el}</div>)}
+      <>
+         <div className='hidden flex-col items-start justify-start text-left sm:flex'>
+            {Object.values(jobs).map(el => <div className='my-3'>{el}</div>)}
 
-      </div>
+         </div>
+         <div className='flex flex-col items-start justify-start text-left sm:hidden text-xs'>
+            {Object.values(jobs).map(el => <div className='my-3'>{el}</div>)}
+
+         </div>
+      </>
    )
 }
 
