@@ -1,5 +1,5 @@
-import VegaDigital from "@/containers/vegaDigital/VegaDigital";
-import Home from "@/containers/aboutMe/AboutMe";
+import VegaDigital from "@/containers/Business/VegaDigital";
+import Home from "@/containers/Career/Career";
 import { useContext, useState } from "react";
 import AppContext from "@/AppContext";
 import AuthModal from "./auth/AuthModal";
@@ -8,8 +8,8 @@ const MainLayout = () => {
   const { globalUserState, updateGlobalUserState } = useContext(AppContext);
 
   let [mainMenuItems, setMainMenuItems] = useState({
-    home: {
-      name: "About Me",
+    career: {
+      name: "Career",
       container: <Home />,
       menuIcon: "fa-solid fa-house",
     },
@@ -21,6 +21,11 @@ const MainLayout = () => {
       },
       container: <VegaDigital />,
       menuIcon: "fa-solid fa-laptop",
+    },
+    personal: {
+      name: "Personal",
+      container: <div>Personal</div>,
+      menuIcon: "fa-solid fa-house",
     },
   });
 
@@ -79,7 +84,7 @@ const MainLayout = () => {
           <div className=" w-full h-screen items-center text-left flex">
             <div className="w-full ">
               {Object.entries(mainMenuItems)
-                .filter(([key, value]) => key === "home")
+                .filter(([key, value]) => key === "career")
                 .map(([key, value]) => {
                   return (
                     <>
@@ -118,7 +123,7 @@ const MainLayout = () => {
         </div>
         <div className={` ${!menuCollapsed ? "w-11/12" : "w-full"}`}>
           <div>
-            {selectedItem === "home" ? mainMenuItems.home.container : ""}
+            {selectedItem === "career" ? mainMenuItems.career.container : ""}
           </div>
           <div>
             {selectedItem === "business"
@@ -163,7 +168,7 @@ const MainLayout = () => {
 
             <div className=" w-full h-screen items-center text-left flex flex-col justify-center">
               {Object.entries(mainMenuItems)
-                .filter(([key, value]) => key === "home")
+                .filter(([key, value]) => key === "career")
                 .map(([key, value]) => {
                   return (
                     <>
@@ -193,7 +198,9 @@ const MainLayout = () => {
           </div>
         )}
 
-        <div className="w-full">{selectedItem === "home" ? mainMenuItems.home.container : ""}</div>
+        <div className="w-full">
+          {selectedItem === "career" ? mainMenuItems.career.container : ""}
+        </div>
         {/* <div>
           {selectedSubItem === "vegaDigital"
             ? mainMenuItems.business.container
