@@ -97,86 +97,124 @@ const Dashboard = () => {
 
    return (
       <>
-      <div className="bg-white h-full hidden sm:flex flex-col">
-         <div className=" mt-6 font-light text-lg text-gray-600">Vega Real Estate Analysis Tool</div>
-         <div className=" h-auto items-start justify-start w-auto flex m-5">
-            <div className=" shadow-md p-3 bg-slate-100">
-               <div className="font-light text-gray-500">Short Term Property Analysis</div>
-               <div className="flex justify-start items-center my-3">
-                  <div className="flex justify-between items-center">
-                     <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded" onClick={toggleModal}>
-                        +
-                     </button>
-                     <NewModal isOpen={isOpen} onClose={toggleModal} />
+         <div className="bg-white h-full hidden sm:flex flex-col">
+            <div className=" mt-6 font-light text-lg text-gray-600">Vega Real Estate Analysis Tool</div>
+            <div className=" h-auto items-start justify-start w-auto flex m-5">
+               <div className=" shadow-md p-3 bg-slate-100">
+                  <div className="font-light text-gray-500">Short Term Property Analysis</div>
+                  <div className="flex justify-start items-center my-3">
+                     <div className="flex justify-between items-center">
+                        <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded" onClick={toggleModal}>
+                           +
+                        </button>
+                        <NewModal isOpen={isOpen} onClose={toggleModal} />
+                     </div>
                   </div>
-               </div>
-               <div class="bg-white shadow-md rounded-md">
-                  <table class="w-full table-auto">
-                     <thead>
-                        <tr class="bg-gray-200 text-gray-600 uppercase text-xs">
-                           <th class="bg-slate-300 px-2 text-left">Address</th>
-                           <th class="px-2 text-left">Total Investment</th>
-                           <th class="bg-slate-300 px-2 text-center">Cash on Cash</th>
-                           <th class="px-2 text-left">Gross Income / Year</th>
-                           <th class="bg-slate-300 px-2 text-left">Gross Income / Month</th>
-                           <th class="px-2 text-center">Cash Flow / Year</th>
-                           <th class="bg-slate-300 px-2 text-center">Cash Flow / Month</th>
-                           <th class="px-2 text-center">Total Expenses / Year</th>
-                           <th class="bg-slate-300 px-2 text-center">Total Expenses / Month</th>
-                           <th class="px-2 text-center">Actions</th>
-                        </tr>
-                     </thead>
-                     <tbody class="text-gray-600 text-sm font-light">
-                        {!globalUserState.analyses ? '' : Object.entries(globalUserState.analyses).map(([key, value]) => {
-                           return (
-                              <tr class="border-b border-gray-200 hover:bg-gray-100">
-                                 <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap cursor-pointer hover:text-indigo-600" onClick={() => toggleAnalysisModal(key)}>{value.address}</td>
-                                 <td class="py-3 px-6 text-center whitespace-nowrap">{value.totalInvestment}</td>
-                                 <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashOnCashReturn}</td>
-                                 <td class="py-3 px-6 text-center whitespace-nowrap">{value.grossIncomePerYear}</td>
-                                 <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.grossIncomePerMonth}</td>
-                                 <td class="py-3 px-6 text-center whitespace-nowrap">{value.cashFlowPerYear}</td>
-                                 <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashFlowPerMonth}</td>
-                                 <td class="py-3 px-6 text-center whitespace-nowrap">{value.totalExpensesPerYear}</td>
-                                 <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.totalExpensesPerMonth}</td>
-                                 <td class="text-center">
-                                    <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => { }}>
-                                       <i class="fas fa-edit"></i>
-                                    </a>
-                                    <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
-                                       <i class="fas fa-trash"></i>
-                                    </a>
-                                    {/* <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2">
+                  <div class="bg-white shadow-md rounded-md">
+                     <table class="w-full table-auto">
+                        <thead>
+                           <tr class="bg-gray-200 text-gray-600 uppercase text-xs">
+                              <th class="bg-slate-300 px-2 text-left">Address</th>
+                              <th class="px-2 text-left">Total Investment</th>
+                              <th class="bg-slate-300 px-2 text-center">Cash on Cash</th>
+                              <th class="px-2 text-left">Gross Income / Year</th>
+                              <th class="bg-slate-300 px-2 text-left">Gross Income / Month</th>
+                              <th class="px-2 text-center">Cash Flow / Year</th>
+                              <th class="bg-slate-300 px-2 text-center">Cash Flow / Month</th>
+                              <th class="px-2 text-center">Total Expenses / Year</th>
+                              <th class="bg-slate-300 px-2 text-center">Total Expenses / Month</th>
+                              <th class="px-2 text-center">Actions</th>
+                           </tr>
+                        </thead>
+                        <tbody class="text-gray-600 text-sm font-light">
+                           {!globalUserState.analyses ? '' : Object.entries(globalUserState.analyses).map(([key, value]) => {
+                              return (
+                                 <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap cursor-pointer hover:text-indigo-600" onClick={() => toggleAnalysisModal(key)}>{value.address}</td>
+                                    <td class="py-3 px-6 text-center whitespace-nowrap">{value.totalInvestment}</td>
+                                    <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashOnCashReturn}</td>
+                                    <td class="py-3 px-6 text-center whitespace-nowrap">{value.grossIncomePerYear}</td>
+                                    <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.grossIncomePerMonth}</td>
+                                    <td class="py-3 px-6 text-center whitespace-nowrap">{value.cashFlowPerYear}</td>
+                                    <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashFlowPerMonth}</td>
+                                    <td class="py-3 px-6 text-center whitespace-nowrap">{value.totalExpensesPerYear}</td>
+                                    <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.totalExpensesPerMonth}</td>
+                                    <td class="text-center">
+                                       <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => { }}>
+                                          <i class="fas fa-edit"></i>
+                                       </a>
+                                       <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
+                                          <i class="fas fa-trash"></i>
+                                       </a>
+                                       {/* <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2">
                                        <i class="fas fa-download"></i>
                                     </a> */}
-                                 </td>
-                              </tr>
-                           )
-                        })}
-                        <AnalysisModal isOpen={isAnalysisOpen} onClose={toggleAnalysisModal} data={globalUserState.analyses[selectedItem]}></AnalysisModal>
-                     </tbody>
-                  </table>
+                                    </td>
+                                 </tr>
+                              )
+                           })}
+                           <AnalysisModal isOpen={isAnalysisOpen} onClose={toggleAnalysisModal} data={globalUserState.analyses[selectedItem]}></AnalysisModal>
+                        </tbody>
+                     </table>
+                  </div>
                </div>
             </div>
-         </div>
-      </div >
+         </div >
 
-      {/* MOBILE */}
-      <div className="bg-white h-full flex flex-col sm:hidden">
-         <div className="p-2 mt-6 font-light text-sm text-gray-600">Vega Real Estate Analysis Tool</div>
-         <div className=" h-auto items-start justify-start w-auto flex">
-            <div className=" shadow-md bg-slate-100">
-               <div className="font-light text-sm text-gray-500">Short Term Property Analysis</div>
+         {/* MOBILE */}
+         <div className="bg-white h-full flex flex-col sm:hidden">
+            <div className="p-2 mt-6 font-light text-sm text-gray-600">Vega Real Estate Analysis Tools</div>
+            <div className="flex flex-row justify-between items-center">
+               <div className="font-light text-sm text-left text-gray-500">Short Term Property Analysis</div>
                <div className="flex justify-start items-center my-3">
                   <div className="flex justify-between items-center">
-                     <button className="bg-blue-400 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded" onClick={toggleModal}>
+                     <button className=" hover:bg-blue-700 text-black text-3xl font-thin px-4 py-2 rounded" onClick={toggleModal}>
                         +
                      </button>
                      <NewModal isOpen={isOpen} onClose={toggleModal} />
                   </div>
                </div>
-               <div class="bg-white shadow-md rounded-md ">
-                  <table class="w-full table-auto">
+            </div>
+            <div className=" h-auto items-start justify-start w-auto flex flex-col mx-2">
+
+               {!globalUserState.analyses ? '' : Object.entries(globalUserState.analyses).map(([key, value]) => {
+                  return (
+                     <div id={key} class="bg-white shadow-md rounded-md mb-3 flex flex-row w-full p-3 justify-around items-center" >
+                        <div className="flex w-full">
+                           <div className="w-2/4 text-xs m-auto items-center justify-center flex font-bold" onClick={() => toggleAnalysisModal(key)}>{value.address}</div>
+                           <div className="w-1/4 text-xs m-auto">
+                              <div>Investment</div>
+                              <div className="font-bold mt-1">${value.totalInvestment}</div>
+                           </div>
+                           <div className="w-1/4 text-xs ml-4">
+                              <div>ROI</div>
+                              <div className="font-bold mt-1 ">{value.cashOnCashReturn}%</div>
+                           </div>
+                        </div>
+                        <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
+                           <i class="fas fa-trash"></i>
+                        </a>
+
+                        {/* <tr class="border-b border-gray-200 hover:bg-gray-100">
+                           <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap cursor-pointer hover:text-indigo-600" onClick={() => toggleAnalysisModal(key)}>{value.address}</td>
+                           <td class="py-3 px-6 text-center whitespace-nowrap">${value.totalInvestment}</td>
+                           <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashOnCashReturn}%</td>
+                           <td class="text-center">
+                              <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => { }}>
+                                 <i class="fas fa-edit"></i>
+                              </a>
+                              <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
+                                 <i class="fas fa-trash"></i>
+                              </a>
+                           </td>
+                        </tr> */}
+                        <AnalysisModal isOpen={isAnalysisOpen} onClose={toggleAnalysisModal} data={globalUserState.analyses[selectedItem]}></AnalysisModal>
+
+                     </div>
+
+                  )
+               })}
+               {/* <table class="w-full table-auto">
                      <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-xs">
                            <th class="bg-slate-300 px-2 text-left">Address</th>
@@ -203,13 +241,10 @@ const Dashboard = () => {
                               </tr>
                            )
                         })}
-                        <AnalysisModal isOpen={isAnalysisOpen} onClose={toggleAnalysisModal} data={globalUserState.analyses[selectedItem]}></AnalysisModal>
                      </tbody>
-                  </table>
-               </div>
+                  </table> */}
             </div>
          </div>
-      </div >
       </>
    )
 }
