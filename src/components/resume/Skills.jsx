@@ -6,18 +6,15 @@ import { Row, Col, Card, Container, Button } from 'react-bootstrap';
 const Skills = () => {
 
    let skills = {
-      Architecture: ['Serverless', 'Microservices'],
-      Containerization: ['Docker', 'Kubernetes'],
-      Cloud: ['Azure'],
-      InfrastructureAsCode: ['Terraform'],
-      ConfigurationManagement: ['Ansible'],
-      AutomationPipelines: ['Azure DevOps', 'Github Actions'],
-      ProgrammingLanguages: ['Javascript'],
-      Scripting: ['Python', 'Bash'],
+      Containerization: ['Docker'],
+      Cloud: ['Azure', 'Firebase'],
+      AutomationPipelines: ['Github Actions'],
+      ProgrammingLanguages: ['Javascript', 'Typescript'],
       FrontEnd: ['ReactJS'],
+      Framework: ['NextJS'],
       StylingLibrary: ['Tailwind'],
       BackEnd: ['NodeJS'],
-      OperatingSystems: ['MacOS', 'Linux', 'Windows']
+      OperatingSystems: ['MacOS', 'Linux']
    }
 
    return (
