@@ -19,12 +19,12 @@ const MainLayout = () => {
         realState: ["Real Estate", "fa-solid fa-building"],
         vegaDigital: ["Analysis Tools", "fa-solid fa-chart-simple"],
       },
-      container: <VegaDigital />,
+      container: <p>Under Construction</p>,
       menuIcon: "fa-solid fa-laptop",
     },
     personal: {
       name: "Personal",
-      container: <div>Personal</div>,
+      container: <p>Under Construction</p>,
       menuIcon: "fa-solid fa-house",
     },
   });
@@ -84,7 +84,6 @@ const MainLayout = () => {
           <div className=" w-full h-screen items-center text-left flex">
             <div className="w-full ">
               {Object.entries(mainMenuItems)
-                .filter(([key, value]) => key === "career")
                 .map(([key, value]) => {
                   return (
                     <>
@@ -122,19 +121,11 @@ const MainLayout = () => {
           </div>
         </div>
         <div className={` ${!menuCollapsed ? "w-11/12" : "w-full"}`}>
-          <div>
-            {selectedItem === "career" ? mainMenuItems.career.container : ""}
-          </div>
-          {/* <div>
-            {selectedItem === "business"
-              ? mainMenuItems.business.container
-              : ""}
-          </div>
-          <div>
-            {selectedItem === "personal"
-              ? mainMenuItems.personal.container
-              : ""}
-          </div> */}
+        <div className="w-full">
+          {selectedItem === "career" ? mainMenuItems.career.container : ""}
+          {selectedItem === "business" ? mainMenuItems.business.container : ""}
+          {selectedItem === "personal" ? mainMenuItems.personal.container : ""}
+        </div>
         </div>
       </container>
 
@@ -165,7 +156,6 @@ const MainLayout = () => {
 
             <div className=" w-full h-screen items-center text-left flex flex-col justify-center">
               {Object.entries(mainMenuItems)
-                .filter(([key, value]) => key === "career")
                 .map(([key, value]) => {
                   return (
                     <>
@@ -197,21 +187,9 @@ const MainLayout = () => {
 
         <div className="w-full">
           {selectedItem === "career" ? mainMenuItems.career.container : ""}
-        </div>
-        {/* <div>
-          {selectedSubItem === "vegaDigital"
-            ? mainMenuItems.business.container
-            : ""}
-        </div> */}
-        {/* <div>
           {selectedItem === "business" ? mainMenuItems.business.container : ""}
-        </div>
-        <div>
-          {selectedItem === "career" ? mainMenuItems.career.container : ""}
-        </div>
-        <div>
           {selectedItem === "personal" ? mainMenuItems.personal.container : ""}
-        </div> */}
+        </div>
       </container>
     </>
   );
