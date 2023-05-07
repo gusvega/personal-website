@@ -54,6 +54,7 @@ function AnalysisModal({ isOpen, onClose, data }) {
       }
    }
 
+      console.log(data)
    let [selectedItem, setSelectedItem] = useState('propertyInfo')
    let [toggleEdit, setToggleEdit] = useState(false)
 
@@ -61,8 +62,28 @@ function AnalysisModal({ isOpen, onClose, data }) {
       setSelectedItem(item);
    };
 
+   const updateContext = () => {
+      setGlobalUserState({
+         ...globalUserState,
+         analyses: {
+            ...globalUserState.analyses,
+            [id]: {
+               ...values,
+               ...calculations
+            }
+         }
+      })
+   }
+
    const handleToggleEdit = () => {
+      if(toggleEdit){
+         // update context here
+         updateContext()
+         setToggleEdit(!toggleEdit);
+      }
+
       setToggleEdit(!toggleEdit);
+      
    };
 
    return (
@@ -74,7 +95,10 @@ function AnalysisModal({ isOpen, onClose, data }) {
                <div className="bg-gray-200 text-gray-700 py-3 px-4 flex justify-between items-center">
                   <h2 className="text-xl font-bold">Analysis Modal Title</h2>
                   <div className="bg-gray-200 py-2 px-4 flex justify-end">
-                     <button className="bg-gray-700 text-white py-2 px-4 rounded" onClick={handleToggleEdit}>Edit</button>
+                  {toggleEdit 
+                  ? <button className="bg-gray-700 text-white py-2 px-4 rounded" onClick={handleToggleEdit}>Save</button>
+                  : <button className="bg-gray-700 text-white py-2 px-4 rounded" onClick={handleToggleEdit}>Edit</button>}
+                     
                      <button className="bg-gray-700 text-white py-2 px-4 rounded" onClick={onClose}>Close</button>
 
                   </div>

@@ -32,7 +32,6 @@ const MainLayout = () => {
   let [selectedItem, setSelectedItem] = useState(Object.keys(mainMenuItems)[0]);
 
   let [selectedSubItem, setSelectedSubItem] = useState("");
-  // // console.log(selectedSubItem);
 
   const [showDiv, setShowDiv] = useState(false);
 
