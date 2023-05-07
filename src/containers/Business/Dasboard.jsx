@@ -98,7 +98,7 @@ const Dashboard = () => {
    return (
       <>
          <div className="bg-white h-full hidden sm:flex flex-col">
-            <div className=" mt-6 font-light text-lg text-gray-600">Vega Real Estate Analysis Tool</div>
+            <div className=" mt-6 font-light text-lg text-gray-600">Real Estate Analysis Tool</div>
             <div className=" h-auto items-start justify-start w-auto flex m-5">
                <div className=" shadow-md p-3 bg-slate-100">
                   <div className="font-light text-gray-500">Short Term Property Analysis</div>
@@ -163,7 +163,7 @@ const Dashboard = () => {
 
          {/* MOBILE */}
          <div className="bg-white h-full flex flex-col sm:hidden">
-            <div className="p-2 mt-6 font-light text-sm text-gray-600">Vega Real Estate Analysis Tools</div>
+            <div className="p-2 mt-6 font-light text-sm text-gray-600">Real Estate Analysis Tools</div>
             <div className="flex flex-row justify-between items-center">
                <div className="font-light text-sm text-left text-gray-500">Short Term Property Analysis</div>
                <div className="flex justify-start items-center my-3">
@@ -194,20 +194,6 @@ const Dashboard = () => {
                         <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
                            <i class="fas fa-trash"></i>
                         </a>
-
-                        {/* <tr class="border-b border-gray-200 hover:bg-gray-100">
-                           <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap cursor-pointer hover:text-indigo-600" onClick={() => toggleAnalysisModal(key)}>{value.address}</td>
-                           <td class="py-3 px-6 text-center whitespace-nowrap">${value.totalInvestment}</td>
-                           <td class="bg-slate-100 py-3 px-6 text-center whitespace-nowrap">{value.cashOnCashReturn}%</td>
-                           <td class="text-center">
-                              <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => { }}>
-                                 <i class="fas fa-edit"></i>
-                              </a>
-                              <a href="#" class="text-gray-500 hover:text-indigo-600 mr-2" onClick={() => deleteAnalysis(key)}>
-                                 <i class="fas fa-trash"></i>
-                              </a>
-                           </td>
-                        </tr> */}
                         <AnalysisModal isOpen={isAnalysisOpen} onClose={toggleAnalysisModal} data={globalUserState.analyses[selectedItem]}></AnalysisModal>
 
                      </div>

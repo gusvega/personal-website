@@ -113,10 +113,7 @@ function NewModal({ isOpen, onClose }) {
    let totalExpensesPerYear = ''
 
    useEffect(() => {
-      // Updating phase
-      // // console.log('Component updated');
       doCalcs()
-
    });
 
    const doCalcs = () => {
@@ -176,7 +173,7 @@ function NewModal({ isOpen, onClose }) {
 
    let menuItems = {
       propertyInfo: {
-         name: 'Property Information',
+         name: 'Property',
          displayValues: [
             'address',
             'city',
@@ -190,7 +187,7 @@ function NewModal({ isOpen, onClose }) {
          ]
       },
       purchaseInfo: {
-         name: 'Purchase Information',
+         name: 'Purchase',
          displayValues: [
             'askingPrice',
             'offerPrice',
@@ -201,14 +198,14 @@ function NewModal({ isOpen, onClose }) {
          ]
       },
       incomeInfo: {
-         name: 'Income Information',
+         name: 'Income',
          displayValues: [
             'averageNightlyRate',
             'averageOccupancyPercentage',
          ]
       },
       expensesInfo: {
-         name: 'Expenses Information',
+         name: 'Expenses',
          displayValues: [
             'loanTermInYears',
             'interestRatePercentage',
@@ -332,8 +329,8 @@ function NewModal({ isOpen, onClose }) {
                         return (
                            <>
                               <div key={el} className='p-1'>
-                                 <label className='mr-3'>{el}</label>
-                                 <input name={el} value={values[el]} placeholder='Enter text here' onChange={handleInputChange} />
+                                 <label className='mr-3 text-xs'>{el.split(/(?=[A-Z])/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}:</label>
+                                 <input className='text-xs' name={el} value={values[el]} placeholder='Enter text here' onChange={handleInputChange} />
                               </div>
                            </>
                         )
