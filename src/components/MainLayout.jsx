@@ -14,7 +14,7 @@ const MainLayout = () => {
       menuIcon: "fa-solid fa-house",
     },
     business: {
-      name: "Vega Digital",
+      name: "Business",
       subMenu: {
         realState: ["Real Estate", "fa-solid fa-building"],
         vegaDigital: ["Analysis Tools", "fa-solid fa-chart-simple"],
