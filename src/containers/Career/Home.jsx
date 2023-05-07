@@ -23,7 +23,7 @@ const AboutMe = () => {
                               })
                               .pauseFor(2500)
                               .deleteAll()
-                              .typeString('I am a Full Stack Software Engineer... and I can automate things :)')
+                              .typeString('I am a Full Stack Software Engineer with a focus in Front End development... and I can automate things :)')
                               .start();
                         }}
                      />
@@ -78,7 +78,7 @@ const AboutMe = () => {
                               })
                               .pauseFor(2500)
                               .deleteAll()
-                              .typeString('I am a Full Stack Software Engineer... and I can automate things :)')
+                              .typeString('I am a Full Stack Software Engineer with a focus in Front End development... and I can automate things :)')
                               .start();
                         }}
                      />
