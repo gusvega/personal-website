@@ -98,7 +98,7 @@ const Dashboard = () => {
    return (
       <>
          <div className="bg-white h-full hidden sm:flex flex-col">
-            <div className=" mt-6 font-light text-lg text-gray-600">Real Estate Analysis Tool</div>
+            <div className=" mt-6 font-light text-lg text-gray-600">Real Estate Analysis Tools</div>
             <div className=" h-auto items-start justify-start w-auto flex m-5">
                <div className=" shadow-md p-3 bg-slate-100">
                   <div className="font-light text-gray-500">Short Term Property Analysis</div>

@@ -11,7 +11,7 @@ const MainLayout = () => {
     career: {
       name: "Career",
       container: <Home />,
-      menuIcon: "fa-solid fa-house",
+      menuIcon: "fa-solid fa-laptop",
     },
     business: {
       name: "Business",
@@ -20,7 +20,7 @@ const MainLayout = () => {
         vegaDigital: ["Analysis Tools", "fa-solid fa-chart-simple"],
       },
       container: <p>Under Construction</p>,
-      menuIcon: "fa-solid fa-laptop",
+      menuIcon: "fa-solid fa-briefcase",
     },
     personal: {
       name: "Personal",
