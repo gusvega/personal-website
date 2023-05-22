@@ -3,6 +3,7 @@ import { useState } from "react"
 import AboutMe from "./Home";
 import Resume from "./Resume";
 import Vreat from "./Projects/Vreat";
+import Pipeline from "./Projects/Pipeline";
 
 const Projects = () => {
 
@@ -11,10 +12,10 @@ const Projects = () => {
          container: <Vreat/>,
          name: 'VREAT'
       },
-      // resume: {
-      //    name: 'Resume',
-      //    container: <div>Two</div>
-      // },
+      pipeline: {
+         name: 'Pipeline',
+         container: <Pipeline/>
+      },
       // projects: {
       //    name: 'Projects',
       //    container: <div>Three</div>
@@ -55,7 +56,7 @@ const Projects = () => {
             </div>
          </div>
          
-         {selectedItem.toLowerCase() === "resume" ? menuItems.resume.container : ""}
+         {selectedItem.toLowerCase() === "pipeline" ? menuItems.pipeline.container : ""}
          {selectedItem.toLowerCase() === "vreat" ? menuItems.vreat.container : ""}
          {selectedItem.toLowerCase() === "projects" ? menuItems.projects.container : ""}
       </div>
