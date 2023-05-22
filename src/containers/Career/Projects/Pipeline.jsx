@@ -105,8 +105,6 @@ const addChangeAndPush = async () => {
    }
 };
 
-
-
 const Pipeline = () => {
    const [isProcessing, setIsProcessing] = useState(false);
    const [workflow, setWorkflow] = useState({
@@ -253,7 +251,7 @@ const Pipeline = () => {
    };
 
    return (
-      <div className='flex flex-col h-full justify-center'>
+      <div className='flex flex-col h-full'>
          <h1>Sorry still in the works...</h1>
          <button onClick={handleClick} disabled={isProcessing} className='bg-gray-200'>
             {isProcessing ? 'Processing...' : 'Start Automation Pipeline'}
