@@ -335,7 +335,7 @@ const Pipeline = () => {
                Object.entries(workflow).map(([key, value]) => {
                   return (
                      <div>
-                        <div className="w-20 h-20 rounded-full bg-slate-300 flex items-center m-auto text-black font-thin">
+                        <div className="bg-gray-200 text-black font-thin">
                            {value.name}
                         </div>
                         <div>
