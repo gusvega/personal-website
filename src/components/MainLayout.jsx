@@ -60,7 +60,7 @@ const MainLayout = () => {
             !menuCollapsed ? "w-60" : "w-30"
           } `}
         >
-          <div
+          {/* <div
             className=" p-5 flex justify-center items-center"
             onClick={toggleDiv}
           >
@@ -79,8 +79,8 @@ const MainLayout = () => {
                 |
               </p>
             </button>
-          </div>
-          <div className=" w-full h-screen items-center text-left flex">
+          </div> */}
+          {/* <div className=" w-full h-screen items-center text-left flex">
             <div className="w-full ">
               {Object.entries(mainMenuItems)
                 .map(([key, value]) => {
@@ -117,7 +117,7 @@ const MainLayout = () => {
                   );
                 })}
             </div>
-          </div>
+          </div> */}
         </div>
         <div className={` ${!menuCollapsed ? "w-11/12" : "w-full"}`}>
         <div className="w-full">
