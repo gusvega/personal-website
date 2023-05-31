@@ -134,11 +134,11 @@ const MainLayout = () => {
           className="fixed top-0 right-0 p-8 flex justify-center items-center  w-3 h-3 "
           onClick={toggleDiv}
         >
-          <button className=" text-white rounded justify-center items-center ">
+          {/* <button className=" text-white rounded justify-center items-center ">
             <p className="text-black font-extrabold text-2xl transform rotate-90 m-auto duration-300 ease-in-out">
               |
             </p>
-          </button>
+          </button> */}
         </div>
         {showDiv && (
           <div className="fixed top-0 left-0 w-full h-full bg-white bg-opacity-90 backdrop-blur z-50">
