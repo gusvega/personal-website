@@ -35,7 +35,7 @@ const AboutMe = () => {
                      Aside from my work in software engineering, I am also a real estate investor specializing in short term rentals.
                      <br></br>
                      <br></br>
-                     I build tools to help me analyze potential investment. Check out Vega Digital if interested.
+                     I build tools to help me analyze potential investment.
 
                      <br></br>
                      <br></br>
