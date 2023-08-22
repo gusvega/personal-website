@@ -153,7 +153,7 @@ function Services() {
 
 export const metadata = {
   description:
-    '.',
+    '..',
 }
 
 export default async function Home() {
@@ -183,7 +183,7 @@ export default async function Home() {
         I believe everyone should have four hobbies. One that brings you happiness. One that keeps you creative. One that makes you money. And one that keeps you healthy
       </Testimonial>
 
-
+{/* s */}
       <Services />
 
       <ContactSection />
