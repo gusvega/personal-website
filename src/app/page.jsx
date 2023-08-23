@@ -42,6 +42,7 @@ function Clients() {
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
             Technologies I like to work with the most
           </h2>
+          {/* f */}
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
