@@ -170,6 +170,14 @@ export default async function Home() {
           <p className="mt-6 text-xl text-neutral-600">
             Machine Learning Engineer specializing in MLOps. Background in software development as a backend, frontend, and full stack engineer. Experiece working as a DevOps and Solutions engineer. Always with a focus on automation and cloud deployments.
           </p>
+          <br></br>
+          <p className="mt-6 text-xl text-neutral-600">
+            Background in software development as a backend, frontend, and full stack engineer. Experiece working as a DevOps and Solutions engineer. Always with a focus on automation and cloud deployments.
+          </p>
+          <br></br>
+          <p className="mt-6 text-xl text-neutral-600">
+            Always with a focus on automation and cloud deployments.
+          </p>
         </FadeIn>
       </Container>
 
