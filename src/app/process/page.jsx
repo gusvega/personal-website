@@ -272,7 +272,7 @@ export default function Process() {
     <>
       <PageIntro eyebrow="My Process" title="How I work">
         <p>
-          I love to see projects from a big-picture perspective! It's like being the captain of the ship, guiding it from start to finish. From planning and coding to building, testing, releasing, deploying, operating, and keeping a close eye on everything, I'm all in! Understanding the whole shebang lets me make smarter decisions and ensures products sail smoothly to success. It's the adventure I thrive on, watching ideas come to life and grow in this ever-changing tech world.
+          I love to see projects from a big-picture perspective! It's like being the captain of the ship, guiding it from start to finish. From gathering requirements to data preparation to operating and keeping a close eye on everything, I'm all in! Understanding the whole shebang lets me make smarter decisions and ensures products sail smoothly to success. It's the adventure I thrive on, watching ideas come to life and grow in this ever-changing tech world.
         </p>
         <br></br>
         <p>
@@ -280,7 +280,7 @@ export default function Process() {
         </p>
         <br></br>
         <p className='text-sm'>
-          Planning &rarr; Code &rarr; Build &rarr; Test &rarr; Release &rarr; Deploy &rarr; Operate &rarr; Monitor
+          ML Design &rarr; Model Development &rarr; Operations
         </p>
       </PageIntro>
 

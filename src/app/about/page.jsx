@@ -31,9 +31,6 @@ function Culture() {
         title="Balance your passion with your passion for life."
         invert
       >
-        <p>
-          We are a group of like-minded people who share the same core values.
-        </p>
       </SectionIntro>
       <Container className="mt-16">
         <GridList>
@@ -131,7 +128,7 @@ export default async function About() {
     <>
       <PageIntro title="About Me">
         <p>
-          Hello There!  My name is Gus Vega. I am a Full Stack Software Engineer with a focus on JavaScript ecosystems and I find software automation pretty fascinating as well.
+          Hello There!  My name is Gus Vega. I am a Machine Learning Engineer.
         </p>
         <br></br>
         <p>
