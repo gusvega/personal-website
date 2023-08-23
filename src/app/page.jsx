@@ -154,7 +154,7 @@ function Services() {
 
 export const metadata = {
   description:
-    '..',
+    '.',
 }
 
 export default async function Home() {
@@ -168,7 +168,7 @@ export default async function Home() {
             Gus Vega.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Machine Learning Engineer specializing in MLOps. Background in software development as a backend, frontend, and full stack engineer. Experiece working as a DevOps and Solutions engineer. Always with a focus on automation and cloud deployments.
+            Machine Learning Engineer specializing in MLOps.
           </p>
           <br></br>
           <p className="mt-6 text-xl text-neutral-600">
