@@ -15,7 +15,7 @@ import logoHomeWork from '@/images/clients/home-work/azure.svg'
 import logoMailSmirk from '@/images/clients/mail-smirk/docker.svg'
 import logoNorthAdventures from '@/images/clients/north-adventures/terraform.svg'
 import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/ansible.svg'
+import logoPhobiaLight from '@/images/clients/phobia/python.svg'
 import logoUnseal from '@/images/clients/unseal/react.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
@@ -24,7 +24,7 @@ import { Button } from '@/components/Button'
 
 
 const clients = [
-  ['Ansible', logoPhobiaLight],
+  ['Python', logoPhobiaLight],
   ['Javascript', logoFamilyFund],
   ['React', logoUnseal],
   ['Docker', logoMailSmirk],
@@ -53,7 +53,7 @@ function Clients() {
             {clients.map(([client, logo]) => (
               <li key={client}>
                 <FadeIn>
-                  <div className='flex'>
+                  <div className='flex justify-center items-center'>
                     <Image src={logo} alt={client} unoptimized />
                     <p className='pl-5 text-white'>{client}</p>
                   </div>
@@ -99,7 +99,7 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          In the world of software development, each developer and company has their own tech stack preferences. It's like picking a favorite flavor of ice cream - there's something for everyone!
+          In the world of Tech, each engineer and company have their own tech stack preferences. It's like picking a favorite flavor of ice cream - there's something for everyone!
           <br></br>
           <br></br>
 
@@ -130,10 +130,10 @@ function Services() {
               I like all clouds but Azure rocks! It's my go-to platform for seamless deployment and effortless scalability.
             </ListItem>
             <ListItem title="Automation">
-              I love automation! Terraform, Ansible, GitHub Actions, Docker, and Kubernetes are my go-to tools for automating deployments.
+              I love automation! Terraform, Ansible, Azure DevOps, Docker, and Kubernetes are my go-to tools for automating deployments.
             </ListItem>
             <ListItem title="Machine Learning">
-              Finding Machine Learning more interesting every day. Tensoflow and PyTorch, to name a few, are tools I enjoy using on ML projects.
+              Finding Machine Learning more interesting every day. Python, Tensoflow, and PyTorch, to name a few, are tools I enjoy using on ML projects.
             </ListItem>
           </List>
           <br></br>
@@ -172,7 +172,7 @@ export default async function Home() {
           </p>
           <br></br>
           <p className="mt-6 text-xl text-neutral-600">
-            Background in software development as a backend, frontend, and full stack engineer. Experiece working as a DevOps and Solutions engineer. Always with a focus on automation and cloud deployments.
+            Background in software development as a backend, frontend, and full stack engineer. Experiece working as a DevOps and Solutions engineer as well.
           </p>
           <br></br>
           <p className="mt-6 text-xl text-neutral-600">
