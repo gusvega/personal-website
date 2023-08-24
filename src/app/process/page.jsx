@@ -60,63 +60,55 @@ function Section({ title, image, children }) {
 
 function Planning() {
   return (
-    <Section title="ML Design" image={{ src: imageWhiteboard }}>
-      <div className="space-y-6 text-base text-neutral-600">
-        <div class="space-y-4">
-          <div class="font-bold mr-1">Gather Requirements:</div> This involves understanding the project's objectives, constraints, and expectations. It's about figuring out what the stakeholders want from the machine learning solution.
+    <Section title="Planning" image={{ src: imageWhiteboard }}>
+       <div className="space-y-6 text-base text-neutral-600">
+         <p>
+           This initial stage lays the foundation for the entire project. It involves gathering requirements, defining goals, creating a roadmap, and outlining the scope of the project. Proper planning ensures that the development team understands what needs to be accomplished and sets clear expectations for the entire process.
+         </p>
+         <p>
+           When it comes to planning, I find GitHub to be an absolute lifesaver. It's like the mastermind behind my project, enabling seamless collaboration among team members. With GitHub, I can discuss requirements, define our goals, and create a clear roadmap for my journey. It's the centralized hub where all my planning and decision-making come together, ensuring I stay on track and build something amazing.        </p>
+       </div>
 
-          <div class="font-bold mr-1">Prioritize ML Use Cases:</div> Identifying the most impactful use cases for machine learning. This step helps in focusing efforts on the areas where ML can bring the most value.
+       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
+         Preferred tools and/or Technologies
+       </h3>
+       <TagList className="mt-4">
+         <TagListItem>Github</TagListItem>
+         <TagListItem>Azure DevOps</TagListItem>
+         <TagListItem>Jira</TagListItem>
+         <TagListItem>Agile methodology</TagListItem>
 
-          <div class="font-bold mr-1">Business Understanding:</div> Deeply understanding the business context and how the machine learning solution aligns with the overall business strategy.
-
-          <div class="font-bold mr-1">Data Acquisition:</div> Collecting the relevant data needed for model training. This can involve various data sources, APIs, databases, or data scraping.
-
-        </div>
-      </div>
-
-      <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Preferred tools and/or Technologies
-      </h3>
-      <TagList className="mt-4">
-        <TagListItem>Azure DevOps</TagListItem>
-        <TagListItem>Azure ML</TagListItem>
-        <TagListItem>Power BI</TagListItem>
-        <TagListItem>Azure Data Factory</TagListItem>
-
-      </TagList>
-    </Section>
+       </TagList>
+     </Section>
   )
 }
 
 function Code() {
   return (
-    <Section title="Model Development" image={{ src: imageCode }}>
-      <div className="space-y-6 text-base text-neutral-600">
-        <div class="space-y-4">
-          <div class="font-bold mr-1">Data Prep & Processing:</div> Cleaning, transforming, and preparing the data for model training. This step is crucial as the quality of data significantly impacts the model's performance.
+<Section title="Code" image={{ src: imageCode }}>
+       <div className="space-y-6 text-base text-neutral-600">
+         <p>
+           The code stage involves writing the actual software using programming languages and frameworks. It is the heart of development where the envisioned features and functionalities come to life. Writing clean, efficient, and maintainable code is crucial for building a successful product.
+         </p>
 
-          <div class="font-bold mr-1">Feature Engineering:</div> Creating new features from the existing data that can improve the model's predictive power. It requires domain knowledge and creativity.
-
-          <div class="font-bold mr-1">Model Training / Experimentation:</div> Developing and fine-tuning machine learning models using various algorithms. Experimentation helps in finding the best performing model.
-
-          <div class="font-bold mr-1">Model Analysis and Evaluation:</div> Assessing the model's performance using metrics like accuracy, precision, recall, etc. This step guides the decision of whether the model is ready for deployment.
-        </div>
+         <p>
+           When it's time to code, I can't help but be drawn to the awesome JavaScript ecosystem, especially React for frontend and Node.js for backend. JavaScript is like the heartbeat of my development, where I breathe life into my ideas and create a powerful and cohesive product. With React's sleek frontend capabilities and Node.js's robust backend features, I can craft something truly extraordinary. It's like the perfect harmony, making our coding experience a delightful melody.        </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Preferred tools and/or Technologies
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Python</TagListItem>
-        <TagListItem>Pandas</TagListItem>
-        <TagListItem>NumPy</TagListItem>
-        <TagListItem>Scikit-learn</TagListItem>
-        <TagListItem>TensorFlow</TagListItem>
-        <TagListItem>PyTorch</TagListItem>
-        <TagListItem>Azure Data Bricks</TagListItem>
-        <TagListItem>Azure ML</TagListItem>
-        <TagListItem>Github</TagListItem>
-        <TagListItem>Jupyter Notebooks</TagListItem>
+         <TagListItem>JavaScript</TagListItem>
+         <TagListItem>ReactJS</TagListItem>
+         <TagListItem>NodeJS</TagListItem>
+         <TagListItem>TypeScript</TagListItem>
+         <TagListItem>ExpressJS</TagListItem>
+         <TagListItem>Tailwind</TagListItem>
+         <TagListItem>NextJS</TagListItem>
+         <TagListItem>APIs</TagListItem>
+         <TagListItem>Github</TagListItem>
+         <TagListItem>Environment Variables</TagListItem>
 
 
 
@@ -127,25 +119,22 @@ function Code() {
 
 function Build() {
   return (
-    <Section title="Operations" image={{ src: imageBuild }}>
-      <div className="space-y-6 text-base text-neutral-600">
-        <div class="space-y-4">
-          <div class="font-bold mr-1">ML Model Deployment:</div> Deploying the trained model to a production environment where it can serve predictions to end-users. This can involve containerization for easy deployment.
-
-          <div class="font-bold mr-1">CI/CD Pipelines:</div> Setting up continuous integration and continuous deployment pipelines to automate the process of deploying new versions of the model as improvements are made.
-
-          <div class="font-bold mr-1">Model Monitoring & Triggering:</div> Implementing monitoring mechanisms to track the model's performance in real-world scenarios. This could involve setting up alerts or triggers to retrain or update the model if its performance degrades.
-        </div>
+    <Section title="Build" image={{ src: imageBuild }}>
+       <div className="space-y-6 text-base text-neutral-600">
+         <p>
+           The build process takes the code and compiles it into executable or deployable artifacts. It checks for syntax errors and other issues, ensuring that the code is ready for further testing and deployment.
+         </p>
+         <p>
+           When it's build time, GitHub Actions takes the stage as my automation star. It's like my backstage crew, effortlessly compiling my code into deployable artifacts. With its seamless and efficient build pipeline, it checks for any hiccups like syntax errors or issues, ensuring my code is polished and ready for the next steps. GitHub Actions makes the build process a breeze, allowing me to focus on the bigger picture.         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
         Preferred tools and/or Technologies
       </h3>
       <TagList className="mt-4">
-        <TagListItem>Github</TagListItem>
-        <TagListItem>Azure Kubernetes Service</TagListItem>
-        <TagListItem>Docker</TagListItem>
-        <TagListItem>Azure DevOps</TagListItem>
+      <TagListItem>Github Actions</TagListItem>
+         <TagListItem>Yarn</TagListItem>
+         <TagListItem>NPM</TagListItem>
       </TagList>
     </Section>
   )
@@ -280,19 +269,19 @@ export const metadata = {
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="My MLOps Process" title="How I See It">
-        <p>
-          I love to see projects from a big-picture perspective! It's like being the captain of the ship, guiding it from start to finish. From gathering requirements to data preparation to operating and keeping a close eye on everything, I'm all in! Understanding the whole shebang lets me make smarter decisions and ensures products sail smoothly to success. It's the adventure I thrive on, watching ideas come to life and grow in this ever-changing tech world.
-        </p>
-        <br></br>
-        <p>
-          Getting a product to production can be broken down into stages. Of course there are different ideas and ways to do it, but this is how I see things and what I believe each one of the stages are and what is involved in each stage.
-        </p>
-        <br></br>
-        <p className='text-sm'>
-          ML Design &rarr; Model Development &rarr; Operations
-        </p>
-      </PageIntro>
+ <PageIntro eyebrow="My Process" title="How I work">
+         <p>
+           I love to see projects from a big-picture perspective! It's like being the captain of the ship, guiding it from start to finish. From planning and coding to building, testing, releasing, deploying, operating, and keeping a close eye on everything, I'm all in! Understanding the whole shebang lets me make smarter decisions and ensures products sail smoothly to success. It's the adventure I thrive on, watching ideas come to life and grow in this ever-changing tech world.
+         </p>
+         <br></br>
+         <p>
+           Getting a product to production can be broken down into stages. Of course there is different ideas and ways to do it, but this is how I see things and what I believe each one of the stages are and what is involved in each stage.
+         </p>
+         <br></br>
+         <p className='text-sm'>
+           Planning &rarr; Code &rarr; Build &rarr; Test &rarr; Release &rarr; Deploy &rarr; Operate &rarr; Monitor
+         </p>
+       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
 
@@ -301,9 +290,9 @@ export default function Process() {
         <Code />
         <Border className="w-80 mb-10" />
         <Build />
-        {/* <Border className="w-80 mb-10" /> */}
+        <Border className="w-80 mb-10" />
 
-        {/* <Test />
+        <Test />
         <Border className="w-80 mb-10" />
 
         <Release />
@@ -315,7 +304,7 @@ export default function Process() {
         <Operate />
         <Border className="w-80 mb-10" />
 
-        <Monitor /> */}
+        <Monitor />
 
       </div>
       <ContactSection />

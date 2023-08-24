@@ -95,27 +95,27 @@ function Services() {
   return (
     <>
       <SectionIntro
-        title="Focus areas"
-        className="mt-24 sm:mt-32 lg:mt-40"
-      >
-        <p>
-          In the world of Tech, each engineer and company have their own tech stack preferences. It's like picking a favorite flavor of ice cream - there's something for everyone!
-          <br></br>
-          <br></br>
+         title="Focus areas"
+         className="mt-24 sm:mt-32 lg:mt-40"
+       >
+         <p>
+           In the world of software development, each developer and company has their own tech stack preferences. It's like picking a favorite flavor of ice cream - there's something for everyone!
+           <br></br>
+           <br></br>
 
-          For me, after exploring the options, I settled on the tech stack that fits me the most. It just clicks with me, like finding the perfect coffee in the morning. With my preferred stack, I'm confident I can whip up some cool projects and provide top-notch services for clients and/or provide value to any company.
+           For me, after exploring the options, I settled on the tech stack that fits me the most. It just clicks with me, like finding the perfect coffee in the morning. With my preferred stack, I'm confident I can whip up some cool projects and provide top-notch services for clients and/or provide value to any company.
 
-          So while others have their tech stack flavors, I'm sticking to mine, ready to code up a storm and bring some tech magic to the table!
+           So while others have their tech stack flavors, I'm sticking to mine, ready to code up a storm and bring some tech magic to the table!
 
-          <br></br>
-          <br></br>
-          <Button
-          className="mt-8"
-          href='https://gusvega.dev/process'
-        >
-          Read more
-        </Button>        </p>
-      </SectionIntro>
+           <br></br>
+           <br></br>
+           <Button
+           className="mt-8"
+           href='https://gusvega.dev/process'
+         >
+           Read more
+         </Button>        </p>
+       </SectionIntro>
       <Container className="mt-16">
         <div className="lg:flex lg:items-center lg:justify-end">
 
@@ -131,9 +131,6 @@ function Services() {
             </ListItem>
             <ListItem title="Automation">
               I love automation! Terraform, Ansible, Azure DevOps, Docker, and Kubernetes are my go-to tools for automating deployments.
-            </ListItem>
-            <ListItem title="Machine Learning">
-              Finding Machine Learning more interesting every day. Python, Tensoflow, and PyTorch, to name a few, are tools I enjoy using on ML projects.
             </ListItem>
           </List>
           <br></br>
@@ -168,15 +165,15 @@ export default async function Home() {
             Gus Vega.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            Machine Learning Engineer specializing in MLOps.
+            <span className='font-bold'>Software Engineer</span> with a focus on web application development.
           </p>
           <br></br>
           <p className="mt-6 text-xl text-neutral-600">
-            Background in software development as a backend, frontend, and full stack engineer. Experiece working as a DevOps and Solutions engineer as well.
+            Javascript, ReactJS, NodeJS, and NextJS as some of my every day tools.
           </p>
           <br></br>
           <p className="mt-6 text-xl text-neutral-600">
-            Always with a focus on automation and cloud deployments.
+            Always focusing on automation and cloud deployments.
           </p>
         </FadeIn>
       </Container>

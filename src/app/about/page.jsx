@@ -128,7 +128,7 @@ export default async function About() {
     <>
       <PageIntro title="About Me">
         <p>
-          Hello There!  My name is Gus Vega. I am a Machine Learning Engineer.
+          Hello There!  My name is Gus Vega. I am a Software Engineer.
         </p>
         <br></br>
         <p>
