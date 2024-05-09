@@ -130,7 +130,7 @@ function Services() {
               I like all clouds but Azure rocks! It's my go-to platform for seamless deployment and effortless scalability.
             </ListItem>
             <ListItem title="Automation">
-              I love automation! Terraform, Ansible, Azure DevOps, Docker, and Kubernetes are my go-to tools for automating deployments.
+              I love automation! Terraform, Ansible, Github Actions, Docker, and Kubernetes are my go-to tools for automating deployments.
             </ListItem>
           </List>
           <br></br>

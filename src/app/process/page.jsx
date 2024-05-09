@@ -74,7 +74,7 @@ function Planning() {
        </h3>
        <TagList className="mt-4">
          <TagListItem>Github</TagListItem>
-         <TagListItem>Azure DevOps</TagListItem>
+         <TagListItem>Github Actions</TagListItem>
          <TagListItem>Jira</TagListItem>
          <TagListItem>Agile methodology</TagListItem>
 
@@ -108,10 +108,7 @@ function Code() {
          <TagListItem>NextJS</TagListItem>
          <TagListItem>APIs</TagListItem>
          <TagListItem>Github</TagListItem>
-         <TagListItem>Environment Variables</TagListItem>
-
-
-
+         <TagListItem>Github Actions</TagListItem>
       </TagList>
     </Section>
   )
