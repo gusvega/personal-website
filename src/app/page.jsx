@@ -165,15 +165,16 @@ export default async function Home() {
             Gus Vega.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            <span className='font-bold'>Senior DevOps Engineer</span> with a focus on containerized applications.
+            <span className='font-bold'>Senior DevOps/Software Engineer</span> specializing in containerized applications.
           </p>
-          <br></br>
           <p className="mt-6 text-xl text-neutral-600">
-            Docker, Kubernetes, Azure are some of my every day tools.
+          Architecture, UI/UX, and deployment: I enjoy every piece of web app development.
           </p>
-          <br></br>
           <p className="mt-6 text-xl text-neutral-600">
-            Always focusing on automation and cloud deployments.
+          JavaScript ecosystem tools power all my web app projects - <span className='font-bold'>React - Node - NextJS</span>
+          </p>
+          <p className="mt-6 text-xl text-neutral-600">
+          <span className='font-bold'>Azure</span> and <span className='font-bold'>GitHub Actions</span> drive my automation and cloud deployments
           </p>
         </FadeIn>
       </Container>
